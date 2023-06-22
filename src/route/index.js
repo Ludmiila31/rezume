@@ -3,6 +3,9 @@ const express = require('express')
 // Cтворюємо роутер - місце, куди ми підключаємо ендпоїнти
 const router = express.Router()
 // ================================================================
+
+
+
 var header = {
 
   name: {
@@ -140,8 +143,8 @@ router.get('/skills', function (req, res) {
           point: null,
         },
       ],
-    },
-    main: {
+
+
       hobbies: [
         {
           name: "Swimming",
@@ -179,7 +182,6 @@ router.get('/education', function (req, res) {
 
 
     main: {
-
       schools: [
         {
           name: "СШ №246",
@@ -199,9 +201,7 @@ router.get('/education', function (req, res) {
           isEnd: false,
         },
       ],
-    },
 
-    main: {
       certifications: [
         {
           name: "сертефікат 1",
@@ -214,6 +214,73 @@ router.get('/education', function (req, res) {
         {
           name: "сертефікат 4",
           id: 154878,
+        },
+      ],
+    },
+
+
+    footer,
+  })
+})
+
+
+// ================================================================
+
+//              ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/work', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+
+  res.render('work', {
+    // ↙ сюди вводимо JSON дані
+
+    layout: 'big',
+
+    page: {
+      title: 'Resume/work',
+    },
+    header,
+    main: {
+      works: [
+        {
+          position: 'Junior Fullstack Developer',
+          company: {
+            name: 'IT Brains',
+            url: null,
+          },
+          duration: {
+            from: '10.10.2022',
+            to: null,
+          },
+          projectAmount: 3,
+
+          projects: [{
+            name: 'Resume',
+            url: 'https://rezume.com.ua/',
+            about: 'Hight-long aplication for searching apartments',
+            stackAmount: 3,
+            awardAmount: 2,
+            stacks: [
+              {
+                name: 'React.Js',
+              },
+              {
+                name: 'HTML / CSS',
+              },
+              {
+                name: 'Node.Js',
+              },
+            ],
+            awards: [
+              {
+                name: 'Background verefication',
+              },
+              {
+                name: 'Preparing SEO optimization pages',
+              },
+            ],
+          },
+
+          ],
         },
       ],
     },

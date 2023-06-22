@@ -8,7 +8,7 @@
     <main>
 
         <section>
-            {{> title data=summary.title}}
+            {{> title data=summary.title big=true}}
             <br>
             <div>
                 <p>{{summary.text}}</p>
@@ -20,7 +20,7 @@
         {{#with experience}}
         <section>
 
-            {{>title data=experience.title}}
+            {{>title data=title}}
             <!-- {{> title data=text}}-->
             <div>
                 <p>

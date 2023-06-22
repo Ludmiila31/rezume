@@ -7,7 +7,7 @@
     {{#with main}}
     <main>
         <section>
-            {{> title data="My skills"}}
+            {{> title data="My skills" big=true}}
             <ul>
                 {{#each skills}}
                 <li>
@@ -19,11 +19,6 @@
                     {{#unless point}}
                     {{#if point includeZero=true}}(зараз вивчаємо){{/if}}
                     {{/unless}}
-                    <!-- {{name}}({{point}})
-                    {{#if isTop}}(top){{/if}}
-                    {{#unless point}}(ще вивчаємо){{/unless}}
-                    {{#if point includeZero=true}}(ще вивчаємо){{/if}}
-                    {{#unless point includeZero=true}}(не вивчаємо){{/unless}}-->
                 </li>
                 {{/each}}
             </ul>
