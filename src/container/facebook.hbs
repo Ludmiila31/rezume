@@ -1,0 +1,68 @@
+<div>
+
+    <facebook>
+        <h2>{{name}}</h2>
+        <div>
+            <ul>
+                {{>title data='Users'}}
+                {{#each users}}
+                <li>
+                    <p>id='{{id}}'</p>
+                    <p>name='{{name}}'</p>
+                    <p>gender='{{gender}}'</p>
+                    <p>age='{{age}}'</p>
+                    <hr>
+                    <div>
+                        <ul>
+                            {{>title data='Friends'}}
+                            {{#each friends}}
+                            <li>
+                                <p>id='{{id}}'</p>
+                                <p>name='{{name}}'</p>
+                                <p>gender='{{gender}}'</p>
+                                <p>age='{{age}}'</p>
+                                <ul>
+                                    {{>title data='Mutual_friends'}}
+                                    {{#each mutual_friends}}
+                                    <li>
+                                        <p>id='{{id}}'</p>
+                                        <p>name='{{name}}'</p>
+                                        <p>gender='{{gender}}'</p>
+                                        <p>age='{{age}}'</p>
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    <hr>
+                    <div>
+                        <ul>
+                            {{>title data='Groups'}}
+                            {{#each groups}}
+                            <li>
+                                <p>id='{{id}}'</p>
+                                <p>name='{{name}}'</p>
+                                <p>description='{{description}}'</p>
+                                <ul>
+                                    {{>title data='members'}}
+                                    {{#each members}}
+                                    <li>
+                                        <p>id='{{id}}'</p>
+                                        <p>name='{{name}}'</p>
+                                        <p>gender='{{gender}}'</p>
+                                        <p>age='{{age}}'</p>
+                                    </li>{{/each}}
+                                </ul>
+
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </facebook>
+</div>
