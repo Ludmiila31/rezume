@@ -1,0 +1,104 @@
+<div>
+
+    <section> {{>title data='Js'}}
+        <h1>{{name}}</h1>
+        <b>description='{{description}}'</b>
+    </section>
+    <br>
+    <section>
+        {{#with history}}
+        <p>year='{{year}}'</p>
+        <p>founder='{{founder}}'</p>
+        {{/with}}
+    </section>
+    <br>
+
+    <ul>
+        {{>title data='Types'}}
+        {{#each types}}
+        <li>
+            {{types}}{{this}}
+        </li>
+        {{/each}}
+    </ul>
+    <br>
+    <ul>
+        {{>title data='Syntax'}}
+        {{#with syntax}}
+        <li>
+            <div>
+                <ul>
+                    {{>title data='variables'}}
+                    {{#each variables}}
+                    <li>{{variables}}{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    {{>title data='functions'}}
+                    {{#each functions}}
+                    <li>{{functions}}{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    {{>title data='conditionals'}}
+                    {{#each conditionals}}
+                    <li>{{conditionals}}{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    {{>title data='loops'}}
+                    {{#each loops}}
+                    <li>{{loops}}{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    {{>title data='classes'}}
+                    {{#each classes}}
+                    <li>{{classes}}{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </li>
+        {{/with}}
+    </ul>
+    <br>
+    <ul>
+        {{>title data ='Features'}}
+        {{#each features}}
+        <li>{{features}}{{this}}</li>
+        {{/each}}
+    </ul>
+    <br>
+
+    <ul>
+        {{>title data ='libraries'}}
+        {{#each libraries}}
+        <li>{{libraries}}{{this}}</li>
+        {{/each}}
+    </ul>
+    <ul>
+        {{>title data ='tools'}}
+        {{#each tools}}
+        <li>{{tools}}{{this}}</li>
+        {{/each}}
+    </ul>
+    <ul>
+        {{>title data='Community'}}
+        {{#each community}}
+        <li>
+            <p>name='{{name}}'</p>
+            <p>type='{{type}}'</p>
+        </li>
+        {{/each}}
+    </ul>
+
+
+</div>

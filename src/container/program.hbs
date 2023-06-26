@@ -1,0 +1,135 @@
+<div>
+    {{#with program}}
+    <program>
+        <section>
+            {{>title data=" Program"}}
+            {{#with excursion}}
+            <section>
+                {{>title data=" Excursion"}}
+                <h1>name='{{name}}'</h1>
+                <div>
+                    {{#with location}}
+                    <p>City='{{city}}'</p>
+                    <p>Country='{{country}}'</p>
+                    {{/with}}
+                </div>
+                <p>date='{{date}}'</p>
+                <section>
+                    {{>title data=" Program"}}
+                    <ul>
+                        {{#each program}}
+                        <li>
+                            <p>name='{{name}}'</p>
+                            <p>type='{{type}}'</p>
+                            <div>
+                                <strong> Duration=({{duration}})</strong>
+                            </div>
+
+                            <div>
+                                {{#with details}}
+                                {{>title data="Details"}}
+                                <div>
+                                    <ul>
+                                        {{#with museum}}
+                                        {{>title data=" Museum"}}
+                                        <li>
+                                            <p>name='{{name}}'</p>
+                                            <div>
+                                                {{#with location}}
+                                                <p>Address='{{address}}'</p>
+                                                <p>City='{{city}}'</p>
+                                                <p>Country='{{country}}'</p>
+                                                {{/with}}
+                                                <div>
+                                                    <ul>{{#each exhibits}}{{>title data="Exhibits"}}
+                                                        <li>
+                                                            <p>name='{{name}}'</p>
+                                                            {{#if artist}}
+                                                            <p>artist='{{artist}}'</p>{{/if}}
+                                                            <p>description='{{description}}'</p>
+
+                                                            {{#if audio_guide
+                                                            includeZero=true}}(без автора){{else}}без
+                                                            автора{{/if}}
+                                                            {{#unless isEnd}}{{/unless}}
+
+                                                            <div>
+
+                                                            </div>
+                                                        </li>
+                                                        {{/each}}
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        {{/with}}
+                                    </ul>
+                                    <br>
+
+                                </div>
+                                <div>
+                                    {{#with guide}}
+                                    {{>title data="Guide"}}
+                                    <p>Name='{{name}}'</p>
+                                    <p>Language='{{language}}'</p>
+                                    <p>rating='{{rating}}'</p>
+                                    {{/with}}
+                                </div>
+
+                                {{/with}}
+                            </div>
+                            <hr>
+                            <br>
+                            <div>
+                                <strong> Duration=({{duration}})</strong>
+                            </div>
+                            {{#with details}}
+                            <section>
+                                {{>title data="Venue"}}
+                                {{#with venue}}
+                                <p>name='{{name}}'</p>
+                                {{#with location}}
+                                <p>Address='{{address}}'</p>
+                                <p>City='{{city}}'</p>
+                                <p>Country='{{country}}'</p>
+                                {{/with}}
+                                {{/with}}
+                            </section>
+                            <section>
+                                <div>
+                                    <ul>
+                                        {{>title data=" Performers"}}
+                                        {{#each performers}}
+                                        <li>
+                                            <p>name='{{name}}'</p>
+                                            <p>type='{{type}}'</p>
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                            </section>
+                            <section>
+                                <div>
+                                    {{#with guide}}
+                                    {{>title data="Guide"}}
+                                    <p>Name='{{name}}'</p>
+                                    <p>Language='{{language}}'</p>
+                                    <p>rating='{{rating}}'</p>
+                                    {{/with}}
+                                </div>
+                            </section>
+                            {{/with}}
+
+
+
+                        </li>
+                        {{/each}}
+                    </ul>
+                </section>
+            </section>
+            {{/with}}
+        </section>
+
+
+        {{/with}}
+</div>
