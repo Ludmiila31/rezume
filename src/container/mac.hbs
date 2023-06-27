@@ -2,4 +2,91 @@
     {{>title data='Mac'}}
     <h2>{{name}}</h2>
     <b>description='{{description}}'</b>
+    <p>price='{{price}}'</p>
+    <p>category'{{category}}'</p>
+    {{>title data='Features'}}
+    {{#with features}}
+    <br>
+    {{>title data='processor'}}
+    {{#with processor}}
+    <p>brand='{{brand}}'</p>
+    <p>model='{{model}}'</p>
+    <p>speed='{{speed}}'</p>
+    <p>cores='{{cores}}'</p>
+    <p>cache='{{cache}}'</p>
+    {{/with}}
+    <br>
+    {{>title data='Memory'}}
+    {{#with memory}}
+    <p>type='{{type}}'</p>
+    <p>size='{{size}}'</p>
+    <p>speed='{{speed}}'</p>
+    {{/with}}
+    <br>
+    {{>title data='Storage'}}
+    {{#with storage}}
+    <p>type='{{type}}'</p>
+    <p>size='{{size}}'</p>
+    {{/with}}
+    <br>
+    {{>title data='Display'}}
+    {{#with display}}
+    <p>size='{{size}}'</p>
+    <p>resolution='{{resolution}}'</p>
+    <p>technology='{{technology}}'</p>
+    <p>color_space='{{color_space}}'</p>
+    <p>brightness='{{brightness}}'</p>
+    <p>refresh_rate='{{refresh_rate}}'</p>
+    {{/with}}
+    <br>
+    {{>title data='Graphics'}}
+    {{#with graphics}}
+    <p>brand='{{brand}}'</p>
+    <p>model='{{model}}'</p>
+    <p>memory='{{memory}}'</p>
+    {{/with}}
+    <br>
+    {{>title data='Ports'}}
+    <ul>
+        {{#each ports}}
+        <li>
+            <p>type='{{type}}'</p>
+            <p>count='{{count}}'</p>
+            <!--{{>title data='Features'}}-->
+            <ul>
+                {{#each features}}
+                <li>{{features}}{{this}}</li>{{/each}}
+            </ul>
+            <p></p>
+        </li>
+        {{/each}}
+    </ul>
+    <br>
+    {{>title data='Battery'}}
+    {{#with battery}}
+    <p>type='{{type}}'</p>
+    <p>capacity='{{capacity}}'</p>
+    <p>life='{{life}}'</p>
+    {{/with}}
+    <br>
+    <p>weight='{{weight}}'</p>
+    {{>title data='dimensions'}}
+    {{#with dimensions}}
+    <p>height='{{height}}'</p>
+    <p>width='{{width}}'</p>
+    <p>depth='{{depth}}'</p>
+    {{/with}}
+    <p>operating_system='{{operating_system}}'</p>
+    <br>
+
+    <ul>
+        {{>title data='Accessories'}}
+        {{#each accessories}}
+        <li>
+            <p>name='{{name}}'</p>
+            <p>price='{{price}}'</p>
+        </li>{{/each}}
+    </ul>
+    {{/with}}
+
 </div>
