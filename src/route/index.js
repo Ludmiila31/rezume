@@ -1107,6 +1107,9 @@ router.get('/task22', function (req, res) {
           },
         },
       },
+    },
+  })
+})
 
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
@@ -1177,7 +1180,6 @@ router.get('/task21', function (req, res) {
 
     },
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
 module.exports = router
