@@ -385,6 +385,7 @@ router.get('/person', function (req, res) {
 // ================================================================
 
 
+
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
@@ -597,6 +598,7 @@ router.get('/program', function (req, res) {
     },
   })
 })
+
 // =================================================================
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -680,8 +682,11 @@ router.get('/js', function (req, res) {
 
 
 
+
 // ================================================================// Підключаємо роутер до бек-енду
 // router.get Створює нам один ентпоїнт
+
+
 
 router.get('/car', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -874,7 +879,7 @@ router.get('/mac', function (req, res) {
 
 //                  ↑↑ сюди вводимо JSON дані
 
-// ================================================================
+
 router.get('/facebook', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -1030,7 +1035,10 @@ router.get('/facebook', function (req, res) {
     ],
   })
 })
-//                  ↑↑ сюди вводимо JSON дані
+
+
+
+
 
 // ================================================================
 router.get('/bootstrap', function (req, res) {
