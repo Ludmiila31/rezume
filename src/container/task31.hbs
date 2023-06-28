@@ -276,38 +276,32 @@
         {{#with footer}}
         <h2 class="card-header text-center">{{title}}</h2>
         <div class="row">
-            <div class="card">
-                <div class="card-body">
-                    <div class="card col-4">
-                        {{#each navigation}}
-                        <div>
-                            <p class="text-bg-primary">{{text}}</p>
-                            <a href="#" class="btn btn-link ">{{href}}</a>
-                        </div>
-                        {{/each}}
-                    </div>
+
+            <div class="card col-4">
+                {{#each navigation}}
+                <div>
+
+                    <a href="{{href}}" class="btn btn-link ">{{text}}</a>
                 </div>
+                {{/each}}
+
             </div>
-            <br>
-            <br>
             <div class="card col-4">
                 {{#each socialMedia}}
                 <button class="btn btn-outline-dark">
-                    <h6>{{name}}</h6>
+
                     <div class="list-group-flush ">
-                        <a href="#" class="btn btn-link">{{link}}</a>
+                        <a href="{{link}}" class="btn btn-link">{{name}}</a>
                     </div>
                 </button>
                 {{/each}}
             </div>
-            <br>
-            <br>
             <div class="card col-4">
                 {{#each partners}}
                 <button class="btn btn-outline-info">
-                    <h6>{{name}}</h6>
+
                     <div class="list-group-flush ">
-                        <a href="#" class="btn btn-link">{{link}}</a>
+                        <a href="{{link}}" class="btn btn-link">{{name}}</a>
                     </div>
                 </button>
                 {{/each}}
