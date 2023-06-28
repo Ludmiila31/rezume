@@ -8,10 +8,10 @@
 
             {{#each links}}
 
-            <p class="card-title display-6">{{text}}</p>
 
-            <div class="  list-group-flush ">
-                <a href="#" class="btn btn-link">{{href}}</a>
+
+            <div class="list-group-flush">
+                <a href="{{href}}" class="btn btn-link">{{text}}</a>
             </div>
             {{/each}}
 
@@ -20,8 +20,8 @@
             {{#with button}}
 
             <button class="btn btn-primary ">
-                <span class="text-uppercase">{{text}}</span></button>
-            <a href="#" class=" btn btn-link">{{href}}</a>
+                <a href="{{href}}" class=" text-light btn btn-link">{{text}}</a></button>
+
             {{/with}}
 
             {{/with}}
@@ -42,10 +42,10 @@
                     <div>
                         {{#with button}}
                         <button class="btn btn-primary ">
-                            <span class="text-uppercase">{{text}}</span></button>
+                            <a href="{{link}}" class="text-light btn btn-link">{{text}}</a></button>
 
 
-                        <a href="#" class="btn btn-link">{{link}}</a>
+
                         {{/with}}
                     </div>
                 </div>
@@ -78,11 +78,11 @@
                             <p>{{description}}</p>
                             {{#with button}}
                             <button class=" btn btn-primary ">
-                                <span class="  text-uppercase">{{text}}</span></button>
+                                <a href="{{href}}" class="text-light btn btn-link">{{text}}</a></button>
                             <br>
                             <br>
 
-                            <a href="#" class="btn btn-link">{{href}}</a>
+
                             {{/with}}
                         </div>
                     </div>
