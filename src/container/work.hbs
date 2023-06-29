@@ -6,7 +6,7 @@
 <div>
     {{#with main}}
     <main>
-        <section>
+        <section class="mb-5">
             {{> title data="Work history" big=true}}
             <br>
             <div>
@@ -17,7 +17,7 @@
                             {{position}}
                         </div>
 
-                        <br>
+
 
                         <div>
                             {{duration.from}}
@@ -29,7 +29,7 @@
                             {{/if}}
                         </div>
 
-                        <br>
+
 
                         <div>
                             <b>
@@ -37,12 +37,11 @@
                             </b>
                             <!--{{>link text=company.name href=company.url blank=true noline=true}}-->
                         </div>
-                        <br>
-                        <br>
+
                         <div>
                             <strong>Project ({{projectAmount}})</strong>
                         </div>
-                        <br>
+
                         <ul>
                             {{#each projects}}
                             <li>
@@ -60,25 +59,25 @@
                                 <div>
                                     <ul>
                                         {{#each stacks}}
-                                        <li>
+                                        <li class="ps-5">
                                             <div>{{name}}</div>
                                         </li>
                                         {{/each}}
                                     </ul>
                                 </div>
 
-                                <br>
+
 
                                 <div>
                                     <em>"Projects awards"({{awardAmount}})</em>
                                 </div>
 
-                                <br>
+
 
                                 <div>
                                     <ul>
                                         {{#each awards}}
-                                        <li>
+                                        <li class="ps-5">
                                             <div>{{name}}</div>
                                         </li>
                                         {{/each}}
@@ -91,7 +90,7 @@
                         </ul>
 
                     </li>
-                    <br>
+
                     {{/each}}
                 </ul>
             </div>
@@ -100,7 +99,7 @@
 
 
         {{#with experience}}
-        <section>
+        <sectionclass="mb-5">
 
             {{>title data=title}}
             <!-- {{> title data=text}}-->
@@ -109,8 +108,8 @@
                     {{text}}
                 </p>
             </div>
-        </section>
-        {{/with}}
+            </section>
+            {{/with}}
     </main>
     {{/with}}
 </div>

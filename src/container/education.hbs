@@ -1,11 +1,11 @@
 <div>
     {{#with main}}
     <main>
-        <section>
+        <section class="mb-5">
             {{> title data="My Educationss" big=true}}
             <ul>
                 {{#each schools}}
-                <li>
+                <li class="ps-5">
                     {{name}}
                     {{#if isEnd includeZero=true}}({{isEnd}}){{/if}}
                     {{#unless isEnd}}(ще в процесі){{/unless}}
@@ -14,17 +14,17 @@
             </ul>
         </section>
     </main>
-    <br>
-    <hr>
+
+    <hr class="mb-5">
     {{/with}}
     {{#with main}}
     <main>
-        <section>
+        <section class="mb-5">
 
             <ul>
-                {{>title data=''}}
+                {{>title data='Certification'}}
                 {{#each certifications}}
-                <li>
+                <li class="ps-5">
                     {{name}}
                     {{#if id}}({{id}}){{/if}}
                 </li>
