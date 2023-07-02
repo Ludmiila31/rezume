@@ -135,20 +135,24 @@
         <hr class="mb-5">
         <section class=" col-12 mb-5">
             <div class="nav">
-                {{#each footer}}
-                <div>
-                    {{#each this }}
-                    <div class="nav flex-column">
-                        <div class="nav-item mx-5mb-2">
+                <div class="row">
+                    {{#each footer}}
+                    <div class="row">{{#each this }}
+                        <div class="nav flex-column">
+                            <div class="nav-item mx-5mb-2">
 
-                            <a href="{{link}}" class="nav-link  {{#if @last}}disabled{{/if}}">{{text}}</a>
+                                <a href="{{link}}" class="nav-link  {{#if @last}}disabled{{/if}}">{{text}}</a>
 
+                            </div>
                         </div>
+                        {{/each}}
                     </div>
+
+
+
                     {{/each}}
                 </div>
 
-                {{/each}}
             </div>
         </section>
     </div>
