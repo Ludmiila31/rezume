@@ -82,7 +82,7 @@
                                                     <img class='card-img' src={{this}}>
                                                 </div>
                                                 {{/each}}
-                                                <div class="col-3 m-2">
+                                                <div class="col-3 my-2 ">
                                                     {{#with button}}
                                                     {{#if isPrimary includeZero=true}}
                                                     <a href="{{link}}"
@@ -101,9 +101,6 @@
                 </section>
             </div>
             {{/with}}
-
-
-
         </section>
 
         <div clas="col-12">
@@ -150,8 +147,8 @@
                             </div>
 
 
-                            <div clas='col-12 my-2'>
-                                <div class="card text-center text-dark title">
+                            <div clas='col-12 my-2 mb-2'>
+                                <div class="card text-center text-dark title mb-2">
                                     {{#with otherInfo}}
                                     <div class="row">
                                         <div class="col-4 my-2">
@@ -175,38 +172,107 @@
                                     </div>
                                     {{/with}}
                                 </div>
-
                             </div>
-                            {{/with}}
-                            <div class="col-12  g-2 my-2">
-                                <div class="card">
 
+
+                            {{/with}}
+                            <div class="col-12  mb-2 ">
+                                <div class="card mb-2">
                                     {{#each buttons}}
                                     <div class="row">
-
-                                        <div class="col-4  ">
+                                        <div class="col-3 mx-5 ">
                                             {{#if isPrimary includeZero=true}}
                                             <a href="{{link}}" class="text-light btn btn-primary">{{text}}</a>
                                             {{/if}}
                                         </div>
-
-                                        <div class="col-4  ">
+                                        <div class="col-3  ">
                                             {{#if isSecondary includeZero=true}}
                                             <a href="{{link}}" class="text-light btn btn-secondary">{{text}}</a>
                                             {{/if}}
                                         </div>
-                                        <div class="col-4 pt-1 ">
+                                        <div class="col-3 pt-1 ">
                                             {{#if isDanger includeZero=true}}
                                             <a href="{{link}}" class="text-light btn btn-danger">{{text}}</a>
                                             {{/if}}
                                         </div>
-
                                     </div>
                                     {{/each}}
-
-
                                 </div>
                             </div>
+                            <section class="col-12">
+                                <div class="col-12 mb-2">
+                                    <div class="card text-center text-dark title">
+                                        {{#with recipients}}
+                                        <h2 class="text-center title text-dark">{{title}}</h2>
+                                        <div class="col-12 mx-2">
+                                            <div class="row">
+                                                {{#each users}}
+                                                <div class="col-4 my-3 pt-2 mx-5">
+                                                    <div class="row">
+                                                        <div class="card">
+                                                            <h6 class="title text-center-primary">{{name}}</h6>
+                                                            <p>{{phone}}</p>
+                                                            <div class="col-2 mx-5 my-2">
+                                                                {{#with button}}
+                                                                <a href="link" class="btn btn-primary">{{text}}</a>
+                                                                {{/with}}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                        {{/with}}
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="col-12 ">
+                                <div class="col-12 ">
+                                    <div class="card text-center text-dark title">
+                                        {{#with contacts}}
+                                        <h2 class="text-center title text-dark">{{title}}</h2>
+                                        <div class="col-12">
+                                            <div class="row">
+                                                {{#each contactData}}
+                                                <div class="col-3 mb-2 mx-1">
+                                                    <div class="card">
+                                                        <div class="row">
+                                                            <h6>{{title}}</h6>
+                                                            <p>{{value}}</p>
+                                                            {{#with button}}
+                                                            <div class="col-3 ms-1 ps-5 mb-1">
+                                                                {{#if isPrimary includeZero=true}}
+                                                                <a href="link"
+                                                                    class="text-light btn btn-primary p-2">{{text}}</a>
+                                                                {{/if}}
+                                                            </div>
+                                                            <div class="col-2 mb-1">
+                                                                {{#if isSecondary includeZero=true}}
+                                                                <a href="link"
+                                                                    class="text-light btn btn-secondary p-3">{{text}}</a>
+                                                                {{/if}}
+                                                            </div>
+                                                            <div class="col-2 mb-1 mx-0 ">
+                                                                {{#if isDanger includeZero=true}}
+                                                                <a href="link"
+                                                                    class="text-light btn btn-danger p-3">{{text}}</a>
+                                                                {{/if}}
+                                                            </div>
+
+                                                            {{/with}}
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                {{/each}}
+
+                                            </div>
+                                        </div>
+                                        {{/with}}
+                                    </div>
+                                </div>
+                            </section>
                         </div>
                     </div>
                     {{/with}}
@@ -214,47 +280,38 @@
             </div>
         </section>
 
-        <section class="col-12">
-            <div class="col-12">
-                <div class="card text-center text-dark title">
-                    {{#with recipients}}
-                    <h2 class="text-center title text-dark">{{title}}</h2>
-                    {{/with}}
-                </div>
-            </div>
-        </section>
+
 
 
         <hr class="mb-5">
 
+
         <hr class="mb-5">
+
         <section class=" col-12 mb-5">
-            <div class="row">
-                <div class="nav">
-                    <div class="row">
-                        {{#each footer}}
-                        <div class="col-2">
+            <div class="nav">
+                <div class="row">
+                    {{#each footer}}
+                    <div class="col-12">
+                        <div class="row">
                             {{#each this }}
-
-                            <div class="nav flex-column">
-                                <div class="nav-item mx-5 mb-2">
-
-                                    <a href="{{link}}" class="nav-link  {{#if @last}}disabled{{/if}}">{{text}}</a>
-
+                            <div class="col-2">
+                                <div class="row">
+                                    <div class="nav flex-column">
+                                        <div class="nav-item mx-5 mb-2">
+                                            <a href="{{link}}"
+                                                class="nav-link  {{#if @last}}disabled{{/if}}">{{text}}</a>
+                                        </div>
+                                    </div>
                                 </div>
-
                             </div>
-
                             {{/each}}
                         </div>
                     </div>
                     {{/each}}
                 </div>
-
             </div>
-    </div>
-
-    </section>
+        </section>
 
     </div>
 </main>
