@@ -2565,4 +2565,44 @@ router.get('/shopreview', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
+
+
+
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('index8', {
+    layout: 'default',
+    info: {
+      firstname: 'Ludmila',
+      lastname: 'Bogatyr',
+      title: 'Resume project',
+    },
+    list: {
+      title: 'Список сторінок',
+      buttons: [
+        {
+          text: 'summary',
+          link: '',
+        },
+        {
+          text: 'skills',
+          link: '',
+        },
+        {
+          text: 'car',
+          link: '',
+        },
+        {
+          text: 'education',
+          link: '',
+        },
+      ]
+    }
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 module.exports = router
