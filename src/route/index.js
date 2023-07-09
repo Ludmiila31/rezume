@@ -2570,15 +2570,14 @@ router.get('/shopreview', function (req, res) {
 
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
+router.get('/index8', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('index8', {
-    layout: 'default',
+    layout: 'bootstrap',
     info: {
-      firstname: 'Ludmila',
-      lastname: 'Bogatyr',
+      name: 'Ludmila Bogatyr',
       title: 'Resume project',
     },
     list: {
@@ -2586,19 +2585,47 @@ router.get('/', function (req, res) {
       buttons: [
         {
           text: 'summary',
-          link: '',
+          link: 'http://localhost:3000/summary',
         },
         {
           text: 'skills',
-          link: '',
+          link: 'http://localhost:3000/skills',
         },
         {
           text: 'car',
-          link: '',
+          link: 'http://localhost:3000/car',
+        },
+        {
+          text: 'shopprifile',
+          link: 'http://localhost:3000/shopprofile',
+        },
+        {
+          text: 'shopreview',
+          linl: 'http://localhost:3000/shopreview'
+        },
+        {
+          text: 'shophome',
+          linl: 'http://localhost:3000/shophome'
+        },
+        {
+          text: 'shopcart',
+          link: 'http://localhost:3000/shopcart',
         },
         {
           text: 'education',
-          link: '',
+          link: 'http://localhost:3000/education',
+        },
+        {
+          text: 'web',
+          link: 'http://localhost:3000/web',
+        },
+        {
+          text: 'program',
+          link: 'http://localhost:3000/program',
+        },
+        {
+          text: 'person',
+          link: 'http://localhost:3000/person',
         },
       ]
     }
