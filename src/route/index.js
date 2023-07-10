@@ -46,7 +46,7 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index8', {})
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -2569,67 +2569,67 @@ router.get('/shopreview', function (req, res) {
 
 
 
-//           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
-  // res.render генерує нам HTML сторінку
+// //           ↙ тут вводимо шлях (PATH) до сторінки
+// router.get('/', function (req, res) {
+//   // res.render генерує нам HTML сторінку
 
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index8', {
-    layout: 'bootstrap',
-    // info: {
-    //   name: 'Ludmila Bogatyr',
-    //   title: 'Resume project',
-    // },
-    // list: {
-    //   title: 'Список сторінок',
-    //   buttons: [
-    //     {
-    //       text: 'summary',
-    //       link: 'http://localhost:3000/summary',
-    //     },
-    //     {
-    //       text: 'skills',
-    //       link: 'http://localhost:3000/skills',
-    //     },
-    //     {
-    //       text: 'car',
-    //       link: 'http://localhost:3000/car',
-    //     },
-    //     {
-    //       text: 'shopprifile',
-    //       link: 'http://localhost:3000/shopprofile',
-    //     },
-    //     {
-    //       text: 'shopreview',
-    //       linl: 'http://localhost:3000/shopreview'
-    //     },
-    //     {
-    //       text: 'shophome',
-    //       linl: 'http://localhost:3000/shophome'
-    //     },
-    //     {
-    //       text: 'shopcart',
-    //       link: 'http://localhost:3000/shopcart',
-    //     },
-    //     {
-    //       text: 'education',
-    //       link: 'http://localhost:3000/education',
-    //     },
-    //     {
-    //       text: 'web',
-    //       link: 'http://localhost:3000/web',
-    //     },
-    //     {
-    //       text: 'program',
-    //       link: 'http://localhost:3000/program',
-    //     },
-    //     {
-    //       text: 'person',
-    //       link: 'http://localhost:3000/person',
-    //     },
-    //   ]
-    // }
-  })
-  //                  ↑↑ сюди вводимо JSON дані
-})
+//   //            ↙ cюди вводимо назву файлу з сontainer
+//   res.render('index8', {
+//     layout: 'bootstrap',
+//     // info: {
+//     //   name: 'Ludmila Bogatyr',
+//     //   title: 'Resume project',
+//     // },
+//     // list: {
+//     //   title: 'Список сторінок',
+//     //   buttons: [
+//     //     {
+//     //       text: 'summary',
+//     //       link: 'http://localhost:3000/summary',
+//     //     },
+//     //     {
+//     //       text: 'skills',
+//     //       link: 'http://localhost:3000/skills',
+//     //     },
+//     //     {
+//     //       text: 'car',
+//     //       link: 'http://localhost:3000/car',
+//     //     },
+//     //     {
+//     //       text: 'shopprifile',
+//     //       link: 'http://localhost:3000/shopprofile',
+//     //     },
+//     //     {
+//     //       text: 'shopreview',
+//     //       linl: 'http://localhost:3000/shopreview'
+//     //     },
+//     //     {
+//     //       text: 'shophome',
+//     //       linl: 'http://localhost:3000/shophome'
+//     //     },
+//     //     {
+//     //       text: 'shopcart',
+//     //       link: 'http://localhost:3000/shopcart',
+//     //     },
+//     //     {
+//     //       text: 'education',
+//     //       link: 'http://localhost:3000/education',
+//     //     },
+//     //     {
+//     //       text: 'web',
+//     //       link: 'http://localhost:3000/web',
+//     //     },
+//     //     {
+//     //       text: 'program',
+//     //       link: 'http://localhost:3000/program',
+//     //     },
+//     //     {
+//     //       text: 'person',
+//     //       link: 'http://localhost:3000/person',
+//     //     },
+//     //   ]
+//     // }
+//   })
+//   //                  ↑↑ сюди вводимо JSON дані
+// })
 module.exports = router
